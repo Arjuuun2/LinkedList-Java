@@ -85,6 +85,7 @@ public class Linkedlist {
 		
 	}
 	
+	//this method for deleting a node from random index
 	public int delete(int index) {
 		if(index==0) {
 			return deletFirst();
@@ -98,6 +99,22 @@ public class Linkedlist {
 		prev.next=prev.next.next;
 		return data;
 	}
+	
+	//This method is to find a index for a particular data
+	
+	public Node find(int data) {
+		
+		Node temp=head;
+		while(temp!=null) {
+			if(temp.data==data) {
+				return temp;
+			}
+			temp=temp.next;
+		}
+		return null;
+	}
+	
+	
 	
 	public Node get(int index) {
 		Node temp=head;
