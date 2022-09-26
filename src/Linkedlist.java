@@ -85,6 +85,20 @@ public class Linkedlist {
 		
 	}
 	
+	public int delete(int index) {
+		if(index==0) {
+			return deletFirst();
+		}
+		if(index==size-1) {
+			return deleteLast();
+		}
+		
+		Node prev=get(index-1);
+		int data=prev.next.data;
+		prev.next=prev.next.next;
+		return data;
+	}
+	
 	public Node get(int index) {
 		Node temp=head;
 		for(int i=0;i<index;i++) {

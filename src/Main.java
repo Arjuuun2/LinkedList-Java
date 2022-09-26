@@ -19,6 +19,7 @@ public class Main {
 		list.display();
 		System.out.println(list.deletFirst());
 		System.out.println(list.deleteLast());
+		System.out.println(list.delete(2));
 		list.display();
 	}
 
